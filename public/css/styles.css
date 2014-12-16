@@ -1,0 +1,127 @@
+@font-face {
+    font-family: AndikaW;
+    src:url('Andika-R.woff');
+}
+
+#navbar {
+    font-family: AndikaW, serif;
+}
+#content {
+    font-family: AndikaW, serif;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    transform: translateY(-50%);
+    color: #FFF;
+    text-shadow: black 1px;
+}
+
+.dropdown-menu {
+    max-height: 400px;
+    overflow: auto;
+    width: 230px;
+}
+
+.list-item {
+    padding-top: 6px;
+    padding-left: 56px;
+}
+
+.no-reports {
+    display: none;
+}
+
+fieldset {
+    padding: 1em;
+    font:80%/1;
+}
+
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+    color:white;
+    text-align: left;
+}
+
+label {
+    float:left;
+    width:40%;
+    padding-top:0.2em;
+    text-align:right;
+}
+
+.form-actions {
+    padding: 0px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: inherit;
+    border-top: inherit;
+}
+
+.thumbnails{
+    margin-left:-20px;
+    list-style:none;
+}
+
+.thumbnail {
+    background: lightyellow;
+    margin-left:0px;
+    margin-right: 5px;
+    border-color:#25385c;
+    border-width:1px;
+    position:relative;
+}
+
+.thumbnail>li{
+    float: left;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+.btn-large {
+    opacity: 0.5;
+    font-family: Arvo;
+    width: 160px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.status-bar {
+    height: 60px;
+}
+
+.alert {
+    margin: 60px 0 10px;  /* shift alert bar below navbar */
+    display: none;
+}
+
+#logoutUser {
+    text-align: center;
+}
+
+.dropdown-menu {
+    padding: 15px 15px 0px;
+}
+
+#signup_username, #username, #password {
+    margin-bottom: 0px;
+}
+
+#remember {
+    float: left; 
+    margin-right: 10px;
+}
+
+.notification{
+    display:none; 
+    margin-top: 30px;
+    font-size:80%;
+}
+
+#map-canvas{
+    height:240px;
+    width:440px;
+}

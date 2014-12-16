@@ -1,0 +1,92 @@
+<div class="row-fluid">
+    <form class="form-horizontal span12">
+
+        <fieldset>
+            <legend>Dish Details</legend>
+
+            <div class="row">
+                <div class="span7">
+
+                    <!-- ADD YOUR CODE HERE -->
+                    <div class="control-group">
+                        <label for="name" class="control-label">Dish</label>
+                        <div class="controls">
+                            <input id= "name" name="name" value="<%= name %>" type="text" placeholder="Dish name..." /><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="venue" class="control-label">Served By</label>
+                        <div class="controls">
+                            <input id= "venue" name="venue" value="<%= venue %>" type="text" placeholder="Served by..."/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="info" class="control-label">Dish/Venue Info</label>
+                        <div class="controls">
+                            <input id= "info" name="info" value="<%= info %>" type="text" placeholder="Descriptive terms/tags..."/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="url" class="control-label">Website URL</label>
+                        <div class="controls">
+                            <input id= "url" name="url" value="<%= url %>" type="text" placeholder="Website URL..."/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <p align="left">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Street Address</p>
+                        <label for="numbr" class="control-label">(number,</label>
+                        <div class="controls">
+                            <input id= "numbr" name="numbr" value="<%= numbr %>" type="text" placeholder="Building number..."/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                        <label for="street" class="control-label">street,</label>
+                        <div class="controls">
+                            <input id= "street" name="street" value="<%= street %>" type="text" placeholder="Street name..."/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                        <label for="city" class="control-label">city,</label>
+                        <div class="controls">
+                            <input id= "city" name="city" value="<%= city %>" type="text" placeholder="City"/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                        <label for="province" class="control-label">province)</label>
+                        <div class="controls">
+                            <input id= "province" name="province" value="<%= province %>" type="text" placeholder="Province"/><br/>
+                            <span class="help-inline"> </span>
+                        </div>
+                        <div class="btn currentLocation">Use my Location</div>
+                    </div>
+                    <div class="form-actions">
+                        <a href="#" class="btn btn-primary save"><p align="left">Save</p></a>
+                        <a href="#" class="btn delete"><p align="left">Delete</p></a>
+                    </div>
+
+                </div> <!-- span7 main input panel -->
+
+                <div class="span5">
+                    <div class="well" style="width: 180px;text-align: center;width:50%;margin: 0px auto;">
+                        
+                        <form enctype="multipart/form-data" action="img/" method="post">
+                            
+                            <img id="thumbnail" src="<%= image === null ? 'img/generic.gif' : 'img/uploads/' + image + '_360.jpg' %>"/>
+                            <input id="image" type ="file" />
+                        </form>
+                        <p style="color:#999;">To change the picture, drag a new picture from your file system onto the box above.</p>
+                    </div>
+					<div id="test"></div>
+                </div>
+
+            </div> <!-- row -->
+
+        </fieldset>
+
+
+
+    </form>
+
+</div> <!-- row-fluid -->
+

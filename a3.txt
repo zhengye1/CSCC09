@@ -1,0 +1,7 @@
+Extra Features/Design Aspects:
+- There are no extra features or design aspects that we included in our implementation.
+
+Uncompleted Features/Aspects:
+- We basically completed everything required except for the sorting functionality when browsing dishes.
+  We didn't have enough time to implement it so we were only able to implement sorting by name.
+  Sorting by venue is not implemented.

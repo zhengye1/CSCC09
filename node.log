@@ -1,5 +1,5 @@
 nohup: ignoring input
-connect.multipart() will be removed in connect 3.0
-visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
-connect.limit() will be removed in connect 3.0
-Express server listening on port 41402 in dev mode
+Thu, 18 Dec 2014 15:17:35 GMT express deprecated app.configure: Check app.get('env') in an if statement at app.js:23:5
+Thu, 18 Dec 2014 15:17:35 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Thu, 18 Dec 2014 15:17:35 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+Express server listening on port 8080 in dev mode

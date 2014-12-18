@@ -10,7 +10,6 @@ eatz.EditView = Backbone.View.extend({
         // intializing, if the user passing the model, extract the lat & lng to make the map model
         var lat = this.model.get('lat');
         var lng = this.model.get('lng');
-        console.log(lat + ", " + lng);
         if (lat && lng){
                 this.map = new eatz.Map(lat, lng);
         }
@@ -99,8 +98,7 @@ eatz.EditView = Backbone.View.extend({
 
     saveDish: function () {
         var self = this;
-        self.model.set({'lat':self.map.get('center')['k'], 'lng':self.map.get('center')['B']});
-
+        self.model.set({'lat':self.map.get('center')['k'], 'lng':self.map.get('center')['D']});
         // A2 Remediation: This part will do either save a new dish or update the exist dish
         // First check existance of the id, if id exits, then the action is update the dish
         // Otherwise is save a new dish

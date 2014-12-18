@@ -79,6 +79,9 @@ app.get('/auth', eatz.isAuth);
 //login logout handler
 app.put('/auth', eatz.auth);
 
+app.use('*', function(req, res){
+    res.send(404, '<h3>Can you check your URL?</h3>');
+})
 var options = {
   key: fs.readFileSync('key.pem'),  // RSA private-key
   cert: fs.readFileSync('cert.pem')  // RSA public-key certificate

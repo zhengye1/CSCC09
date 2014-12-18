@@ -41,12 +41,13 @@ var DishSchema = new mongoose.Schema({
   image: { type: String }
 });
 
-// This line will ensure name and venue are distinct pair in the database
-DishSchema.index({"name":1, "venue":1}, {unique:true, dropDups:true});
 
 // Models
 var User = mongoose.model('User', UserSchema);
 var Dish = mongoose.model('Dish', DishSchema);
+
+// This line will ensure name and venue are distinct pair in the database
+DishSchema.index({"name":1, "venue":1}, {unique:true, dropDups:true});
 
 // "exports" is used to make the associated name visible
 // to modules that "require" this file (in particular app.js)
@@ -58,70 +59,38 @@ exports.api = function(req, res){
 
 
 exports.editDish = function(req,res){
-	// First find that req dish
-  Dish.findOne({'_id':req.params.id}, function(err, dish) {
-        if (err) {
-            res.send(500, "Sorry, unable to retrieve dish at this time (" 
-                +err.message+ ")" );
-        } else if (!dish) {
-            res.send(404, "Sorry, that dish doesn't exist; try reselecting from browse view");
-        } else {
-    //       //console.log(dish);
-    //       dish.venue = req.body.venue;
-    //       // using update command to update the dish information, then send back the the response
-    //         Dish.update({'_id':dish._id}, 
-				// {$set: {'name':req.body.name, 'venue':req.body.venue, 'info':req.body.info
-				// , 'numbr':req.body.numbr, 'street':req.body.street, 'city':req.body.city
-				// , 'province':req.body.province, 'url':req.body.url, 'lat':req.body.lat, 'lng':req.body.lng}});
-    //         Dish.find({}, function(error, result){console.log("After update " + result)});
-    //         //console.log(dish);
-            Dish.findOne({'name':req.body.name, 'venue': req.body.venue}, function(dishErr, dupDish){
-              if (dishErr) {
-                  res.send(500, "Sorry, unable to retrieve dish at this time (" 
-                      +err.message+ ")" );
-              } 
-              else if (!dupDish) {
-                console.log(dupDish);
-                  Dish.remove({'_id':dish.id}, function(error, removeResult){
-                    if (!error){
-                      var newDish = new Dish(req.body);
-                      newDish.save(function (newerr, result) {
-                        if (!newerr) {  // save successful, result contains saved dish model
-                        req.name = result.name;
-                        req.venue = result.venue;
-                        req.info = result.info;
-                        req.numbr = result.numbr;
-                        req.street = result.street;
-                        req.city = result.city;
-                        req.province = result.province;
-                        req.url = result.url;
-                        req.image = result.image;
-                        req.lat = result.lat;
-                        req.lng = result.lng;
-                        res.send({'name':result.name, 'venue':result.venue, 'info':result.info
-                            , 'numbr':result.numbr, 'street':result.street, 'city':result.city
-                            , 'province':result.province, 'url':result.url, '_id':result.id, 'lat': result.lat, 'lng':result.lng});
-                        }
-                        else {  // save failed
-                          if (newerr.err.indexOf("E11000") != -1){
-                              res.send(403, "Sorry. dish "+newDish.name+" at "+newDish.venue+" is already in the Eatz database");
-                          }
-                          else
-                            res.send(500, "Unable to create dish at this time; please try again later "
-                          + newerr.message);
-                          }
-                      });            
-                      res.send(200, newDish);
-                    } 
-                    else{
-                      res.send(500, "Cannot delete Dish");
-                    }
-                  });
-              }
-            });
-	     }
-	
-    });
+  var dish = new Dish(req.body);
+  delete req.body._id;
+  Dish.findByIdAndUpdate({"_id": req.params.id}, 
+    {$set : req.body}, 
+    function(err, result){
+    if (!err){
+    req.name = result.name;
+    req.venue = result.venue;
+    req.info = result.info;
+    req.numbr = result.numbr;
+    req.street = result.street;
+    req.city = result.city;
+    req.province = result.province;
+    req.url = result.url;
+    req.image = result.image;
+    req.lat = result.lat;
+    req.lng = result.lng;
+    res.send({'name':result.name, 'venue':result.venue, 'info':result.info
+        , 'numbr':result.numbr, 'street':result.street, 'city':result.city
+        , 'province':result.province, 'url':result.url, '_id':result.id
+        ,'lat': result.lat, 'lng':result.lng});      
+    }
+    else{
+      if (err.errmsg.indexOf("E11000") != -1){
+          res.send(403, "Sorry. dish "+dish.name+" at "+dish.venue+" is already in the Eatz database");
+      }
+      else{
+        res.send(500, "Unable to create dish at this time; please try again later "
+      + err.message);        
+      }      
+    }
+  });
 };
 
 // handle add dish 
@@ -129,6 +98,7 @@ exports.addDish = function(req,res){
   // make a dish entry
 	var dish = new Dish(req.body);
 	dish.save(function (err, result) {
+    console.log(err);
     if (!err) {  // save successful, result contains saved dish model
 		req.name = result.name;
 		req.venue = result.venue;
@@ -143,7 +113,8 @@ exports.addDish = function(req,res){
     req.lng = result.lng;
 		res.send({'name':result.name, 'venue':result.venue, 'info':result.info
 				, 'numbr':result.numbr, 'street':result.street, 'city':result.city
-				, 'province':result.province, 'url':result.url, '_id':result.id, 'lat': result.lat, 'lng':result.lng});
+				, 'province':result.province, 'url':result.url, '_id':result.id
+        ,'lat': result.lat, 'lng':result.lng});
     }
     else {  // save failed
       if (err.err.indexOf("E11000") != -1){

@@ -3,3 +3,83 @@ connect.multipart() will be removed in connect 3.0
 visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
 connect.limit() will be removed in connect 3.0
 Express server listening on port 41402 in dev mode
+[90mGET /public/ [32m200 [90m23ms[0m
+[90mGET /public/css/bootstrap-responsive.min.css [32m200 [90m10ms[0m
+[90mGET /public/css/styles.css [32m200 [90m5ms[0m
+[90mGET /public/css/bootstrap.min.css [32m200 [90m13ms[0m
+[90mGET /public/js/lib/jquery-min.js [32m200 [90m13ms[0m
+[90mGET /public/js/lib/underscore-min.js [32m200 [90m8ms[0m
+[90mGET /public/js/lib/backbone-min.js [32m200 [90m6ms[0m
+[90mGET /public/js/lib/backbone.localStorage.js [32m200 [90m14ms[0m
+[90mGET /public/js/views/paginator.js [32m200 [90m5ms - 743b[0m
+[90mGET /public/js/views/header.js [32m200 [90m5ms[0m
+[90mGET /public/js/views/home.js [32m200 [90m5ms - 334b[0m
+[90mGET /public/js/views/about.js [32m200 [90m3ms - 327b[0m
+[90mGET /public/js/views/edit.js [32m200 [90m5ms[0m
+[90mGET /public/js/views/dishview.js [32m200 [90m6ms - 373b[0m
+[90mGET /public/js/views/dishesview.js [32m200 [90m3ms - 783b[0m
+[90mGET /public/js/models/dish.js [32m200 [90m6ms[0m
+[90mGET /public/js/models/dishes.js [32m200 [90m3ms - 173b[0m
+[90mGET /public/js/utils.js [32m200 [90m4ms[0m
+[90mGET /public/js/main.js [32m200 [90m5ms[0m
+[90mGET /public/js/models/users.js [32m200 [90m3ms - 174b[0m
+[90mGET /public/js/lib/bootstrap.min.js [32m200 [90m7ms[0m
+[90mGET /public/js/views/mapview.js [32m200 [90m3ms - 808b[0m
+[90mGET /public/js/models/map.js [32m200 [90m3ms - 589b[0m
+[90mGET /public/js/lib/underscore-min.map [32m200 [90m34ms - 83.22kb[0m
+[90mGET /public/js/models/user.js [32m200 [90m5ms[0m
+[90mGET /public/js/lib/backbone-min.map [32m200 [90m22ms - 65.95kb[0m
+[90mGET /public/tpl/HomeView.html [32m200 [90m4ms - 370b[0m
+[90mGET /public/tpl/AboutView.html [32m200 [90m3ms - 127b[0m
+[90mGET /public/tpl/HeaderView.html [32m200 [90m4ms[0m
+[90mGET /public/tpl/EditView.html [32m200 [90m7ms[0m
+[90mGET /public/tpl/DishView.html [32m200 [90m3ms - 315b[0m
+[90mGET /public/tpl/MapView.html [32m200 [90m3ms - 28b[0m
+[90mGET /auth [32m200 [90m5ms - 36b[0m
+[90mGET /dishes [32m200 [90m16ms - 620b[0m
+[90mGET /public/img/EditView.png [32m200 [90m4ms - 29kb[0m
+[90mGET /public/img/generic.gif [32m200 [90m43ms - 89.93kb[0m
+[90mGET /public/css/Andika-R.woff [32m200 [90m465ms - 510.97kb[0m
+[90mPUT /auth [32m200 [90m128ms - 309b[0m
+[90mGET /public/img/glyphicons-halflings-white.png [32m200 [90m3ms - 8.57kb[0m
+[90mGET /auth [32m200 [90m2ms - 80b[0m
+{ city: 'Scarborough',
+  image: null,
+  info: 'test',
+  lat: 43.784925,
+  lng: -79.18532299999998,
+  name: 'FirstDish',
+  numbr: '1265',
+  province: 'ON',
+  street: 'Military Trail',
+  url: '',
+  venue: 'Random' }
+undefined
+[90mPUT /dishes/5490f44aa48a93326b215de0 [33m403 [90m18ms - 63b[0m
+[90mGET /auth [32m200 [90m2ms - 80b[0m
+{ city: 'Scarborough',
+  image: null,
+  info: 'test',
+  lat: 43.8053476,
+  lng: -79.22819679999998,
+  name: 'FirstDish',
+  numbr: '200',
+  province: 'ON',
+  street: 'McLevin AVE ',
+  url: '',
+  venue: 'Fixed' }
+
+/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/lib/utils.js:413
+        throw err;
+              ^
+TypeError: Cannot read property 'err' of null
+    at Promise.<anonymous> (/courses/courses/cscc09f14/zhengye1/dev2/Eatz/routes/eatz.js:68:20)
+    at Promise.<anonymous> (/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
+    at Promise.emit (events.js:95:17)
+    at Promise.emit (/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.fulfill (/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/node_modules/mpromise/lib/promise.js:97:20)
+    at /courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/lib/query.js:1394:13
+    at model.Document.init (/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/lib/document.js:250:11)
+    at completeOne (/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/lib/query.js:1392:10)
+    at cb (/courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/lib/query.js:1560:11)
+    at /courses/courses/cscc09f14/rosselet/asn/node_modules/mongoose/lib/utils.js:408:16

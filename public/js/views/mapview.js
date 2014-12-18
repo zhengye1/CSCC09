@@ -26,7 +26,6 @@ eatz.MapView = Backbone.View.extend({
             map: this.map
         });
         this.resize();
-        console.log(this.model);
         return this;
     }
 });

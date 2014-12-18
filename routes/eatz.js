@@ -252,9 +252,8 @@ exports.auth = function(req, res){
   // otherwise logout the user
   else{
       req.session.auth = false;
-      req.session.username = null;
-      req.session.userid = null;
-      res.send({'username':"", 'userid':""});
+      req.session.username = undefined;
+      res.send({'username':undefined, 'userid':undefined});
   }
 };
 

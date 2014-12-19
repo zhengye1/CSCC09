@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node app.js"
+    "test":"node app.js && exit 1"
   },
   "repository": {
     "type": "git",

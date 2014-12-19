@@ -6,15 +6,13 @@ var mongoose = require('mongoose'); // MongoDB integration
 
 var fs = require('fs'),
     // GraphicsMagick (gm) for Node is used to resize user-supplied images
-    gm = require('gm').subClass({imageMagick: true}),
+    gm = require('gm').subClass({imageMagick:true}),
     config = require(__dirname + '/../config'),  // port#, other params
     express = require("express"),
     bcrypt = require("bcrypt");
 
 // Connect to database
-mongoose.connect('mongodb://' +config.dbuser+ ':' +config.dbpass+
-            '@' +config.dbhost+ '/' + config.dbname);
-
+mongoose.connect('mongodb://' + config.dbhost+ '/' + config.dbname);
 
 
 mongoose.connection.on('errror', console.error.bind(console, 'MongoDB connection failed:'));
@@ -252,7 +250,7 @@ exports.auth = function(req, res){
   // otherwise logout the user
   else{
       req.session.auth = false;
-      req.session.username = undefined;
+      req.session.username = undefined
       res.send({'username':undefined, 'userid':undefined});
   }
 };

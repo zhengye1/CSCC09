@@ -9,7 +9,7 @@
  * the value returned by require(), in this case e.g. eatz.api
  * The convention is use the same name for variable and module.
  */
-var https = require('https'),   // ADD CODE
+var http = require('http'),   // ADD CODE
     // NOTE, use the version of "express" linked to the assignment handout
     express = require('express'), // Express Web framework   ... ADD CODE
     fs = require("fs"),
@@ -23,6 +23,7 @@ var app = express();  // Create Express app server
 app.configure(function() {
     // use PORT environment variable, or local config file value
     app.set('port', process.env.PORT || config.port);
+    //app.set('ip address', process.env.IP);
 
     // change param value to control level of logging  ... ADD CODE
     app.use(express.logger(config.env));  // 'default', 'short', 'tiny', 'dev'
@@ -67,7 +68,7 @@ app.put('/dishes/:id', eatz.editDish);
 app.delete('/dishes/:id', eatz.deleteDish);
 
 
-// Upload an image file and perform image processing on it
+// Upload an image file and perform image prossing on it
 app.post('/dishes/image', eatz.uploadImage);
 
 // User signup
@@ -81,14 +82,18 @@ app.put('/auth', eatz.auth);
 
 app.use('*', function(req, res){
     res.send(404, '<h3>Can you check your URL?</h3>');
-})
-var options = {
-  key: fs.readFileSync('key.pem'),  // RSA private-key
-  cert: fs.readFileSync('cert.pem')  // RSA public-key certificate
-};
-
-// Start HTTPS server
-var a  = https.createServer(options, app).listen(app.get('port'), function () {
-    console.log("Express server listening on port %d in %s mode",
-    		app.get('port'), config.env );
 });
+
+/*var options = {
+  key: fs.readFileSync('key.pem'),  // RSA private-key
+  cert: fs.readFileSync('cert.pem')  // RSA public-key certificat
+};*/
+
+// Start HTTPS serve
+var a  = http.createServer(app).listen(app.get('port'), process.env.IP, function () {
+    console.log("Express server listening on port %d in %s mode",
+    		app.get('port'), config.env); 
+});
+
+
+

@@ -4,8 +4,8 @@ module.exports = {
     sessionSecret: 'login_secret',
     sessionTimeout: 1000*60*2,  // 2 minute session timeout
     env: 'dev',   // alternative modes: test, production
-    dbhost: 'mathlab.utsc.utoronto.ca',
-    dbname: 'zhengye1/test',
-    dbuser: 'zhengye1',
-    dbpass: 'zhengye1'
+    dbhost: 'localhost',
+    dbname: 'test',
+    //dbuser: 'zhengye1',
+    //dbpass: 'zhengye1'
  }

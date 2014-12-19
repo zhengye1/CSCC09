@@ -13,8 +13,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test":"node app.js && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
+  
   "repository": {
     "type": "git",
     "url": "https://github.com/zhengye1/CSCC09.git"
@@ -33,3 +34,4 @@
   },
   "homepage": "https://github.com/zhengye1/CSCC09"
 }
+

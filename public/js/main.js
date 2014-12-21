@@ -55,6 +55,7 @@ eatz.AppRouter = Backbone.Router.extend({
                 var dishmodel = new eatz.Dish();  // create new Dish
                 coll.add(dishmodel); // add to the collection
                 var edview = new eatz.EditView({model: dishmodel}); // create the view for that model
+                //$("#content").html(edview.render().el);
             }
         });
 
@@ -91,6 +92,7 @@ eatz.AppRouter = Backbone.Router.extend({
                     var dish = res.get(id); 
                     // and create the edit view for that model
                     this.editView = new eatz.EditView({model:dish});
+                    //$("#content").html(editView.render().el);
                 }
             },
             error :function(e){ //server request returned non-200 type response

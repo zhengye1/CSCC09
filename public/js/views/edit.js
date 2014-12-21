@@ -21,13 +21,13 @@ eatz.EditView = Backbone.View.extend({
     },
 
     render: function () {
-        this.$el.html(this.template(this.model.toJSON()));
+        this.$el.html(this.template(this.model.toJSON()));      
         $("#content").empty().append(this.$el);
         this.mapRender(this.map);
         return this;
     },
 	mapRender: function(map) {
-        this.mapView = new eatz.MapView({model: map});
+        this.mapView = new eatz.MapView({model: this.map});
 	},
 
     events: {
@@ -46,11 +46,11 @@ eatz.EditView = Backbone.View.extend({
     change: function (event) {
         // Remove any existing alert message
         eatz.utils.hideAlert();
-
+        console.log(event);
         // Apply the change to the model
         var target = event.target;
         var change = {};
-        change[target.name] = _.escape(target.value);
+        change[target.name] = target.value;
         this.model.set(change);
 
         // Run validation rule (if any) on changed item
@@ -76,19 +76,20 @@ eatz.EditView = Backbone.View.extend({
                     return false;
                 }
                 // Image uploading
-                if (this.pictureFile) {
-                    eatz.utils.uploadFile(this.pictureFile, function (res) {
+                if (self.pictureFile) {
+                    eatz.utils.uploadFile(self.pictureFile, function (res) {
                         self.model.set("image", res);
                         self.saveDish();
                     });
                 } 
-                else if (this.input) {
-                    eatz.utils.uploadFile(this.input, function (res) {
+                else if (self.input) {
+                    eatz.utils.uploadFile(self.input, function (res) {
                         self.model.set("image", res);
                         self.saveDish();
                     });
                 } 
                 else {
+                    console.log("Get in save Dish now")
                     self.saveDish();
                 }
             }
@@ -205,10 +206,13 @@ eatz.EditView = Backbone.View.extend({
     
 	/*Event handler for picture upload via file browser to render user selected image for upload*/
     imageBrowse: function (event) {
+        console.log(event);
         this.input = document.querySelector('input[type=file]').files[0]; //retrieve img file
+        console.log(this.input);
         if (this.input){
             var reader = new FileReader();
             reader.onload = function () {
+                console.log(reader.result);
                 $('#thumbnail').attr('src', reader.result);
                 
             };

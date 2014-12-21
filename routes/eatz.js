@@ -213,6 +213,8 @@ exports.isAuth = function(req, res){
 
 // signin
 exports.auth = function(req, res){
+  console.log(req.body.username);
+  console.log(req.body.password);
   // if the current request is login
   if (req.body.login){
     var username =  req.body.username; // get username ;
@@ -223,6 +225,7 @@ exports.auth = function(req, res){
     else{
       User.findOne({'username':username}, function(err, user){
         if(!err){
+          console.log(user);
           bcrypt.compare(password, user.password, function(err, result){
             if (result){
               req.session.auth = true ; // user logged in
@@ -256,6 +259,7 @@ exports.auth = function(req, res){
 };
 
 exports.uploadImage = function (req, res) {
+    console.log(req.files);
     // req.files is an object, attribute "file" is the HTML-input name attr
     var filePath = req.files.file.path,   // ADD CODE
         tmpFile = (filePath.split("/").pop()).split(".")[0],  // ADD CODE to extract root file name 

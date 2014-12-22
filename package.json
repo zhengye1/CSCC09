@@ -1,5 +1,5 @@
 {
-  "name": "workspace",
+  "name": "Eatz",
   "version": "1.0.0",
   "description": "CSCC09 Fall 2014 app",
   "main": "app.js",
@@ -16,7 +16,6 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
-  
   "repository": {
     "type": "git",
     "url": "https://github.com/zhengye1/CSCC09.git"
@@ -35,4 +34,3 @@
   },
   "homepage": "https://github.com/zhengye1/CSCC09"
 }
-

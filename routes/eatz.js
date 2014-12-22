@@ -264,10 +264,11 @@ exports.uploadImage = function (req, res) {
     console.log(filePath);    
     console.log(tmpFile);
     gm(filePath).resize(360, 270).write(imageURL + '_360.jpg', function(err) {  // ADD CODE
-        if (!err) {
-            gm(filePath).resize(240, 180).write(imageURL + '_240.jpg', function(err) {  // ADD CODE
-                if (!err) {
-                    fs.unlink(filePath, function (err) {
+        if (!err) 
+        {
+          gm(filePath).resize(240, 180).write(imageURL + '_240.jpg', function(err) {  // ADD CODE
+            if (!err) {
+              fs.unlink(filePath, function (err) {
                         if (err){
                             console.log('ERROR: ' + err.message);
                         } else {
@@ -276,10 +277,13 @@ exports.uploadImage = function (req, res) {
                     });
                     res.send(200, tmpFile)
                 } else {
+                    console.log("eatz.js:line 280" + err);
                     res.send(500, "Unable to resize; please try again later " + err.message);
                 }
             });
-        } else {
+        } 
+        else {
+            console.log("eatz.js:line 286" + err);
             res.send(500, "Unable to resize; please try again later " + err.message);
         }
     });

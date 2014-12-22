@@ -51,6 +51,9 @@ app.configure(function() {
     // location of app's static content ... may need to ADD CODE
     app.use('/public',  express.static(__dirname + "/public"));
 
+    app.use('*', function(req, res){
+        res.send(404, '<h3>Can you check your URL?</h3>');
+    });
     // return error details to client - use only during development
     app.use(express.errorHandler({ dumpExceptions:true, showStack:true }));
 });
@@ -80,10 +83,6 @@ app.get('/auth', eatz.isAuth);
 //login logout handler
 app.put('/auth', eatz.auth);
 
-app.use('*', function(req, res){
-    res.send(404, '<h3>Can you check your URL?</h3>');
-});
-
 /*var options = {
   key: fs.readFileSync('key.pem'),  // RSA private-key
   cert: fs.readFileSync('cert.pem')  // RSA public-key certificat
@@ -94,7 +93,6 @@ var a  = http.createServer(app).listen(app.get('port'), process.env.IP, function
     console.log("Express server listening on port %d in %s mode",
     		app.get('port'), config.env); 
 });
-
 
 
 

@@ -76,14 +76,14 @@ eatz.EditView = Backbone.View.extend({
                     return false;
                 }
                 // Image uploading
-                if (this.pictureFile) {
-                    eatz.utils.uploadFile(this.pictureFile, function (res) {
+                if (self.pictureFile) {
+                    eatz.utils.uploadFile(self.pictureFile, function (res) {
                         self.model.set("image", res);
                         self.saveDish();
                     });
                 } 
-                else if (this.input) {
-                    eatz.utils.uploadFile(this.input, function (res) {
+                else if (self.input) {
+                    eatz.utils.uploadFile(self.input, function (res) {
                         self.model.set("image", res);
                         self.saveDish();
                     });

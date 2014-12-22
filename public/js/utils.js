@@ -38,6 +38,7 @@ eatz.utils = {
                 callback(res);
             },
             error :function(e){
+                console.log(e);
                 eatz.utils.showAlert('Error!', 'An error occurred while uploading ' + file.name, 'alert-error');
             }
         });        

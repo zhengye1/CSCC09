@@ -7,6 +7,7 @@ var eatz = eatz || {};
 eatz.DishesView = Backbone.View.extend({
 
     initialize: function (options) {
+        console.log(options);
         this.options = options || {};
         this.render();
     },

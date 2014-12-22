@@ -66,7 +66,8 @@ eatz.AppRouter = Backbone.Router.extend({
         // Thisis for browse view
         var p = page ? parseInt(page, 10) : 1;
         var dishes = new eatz.DishCollection();
-        dishes.fetch({success: function(res){ //fecth all the dishes
+        dishes.fetch({
+            success: function(res){ //fecth all the dishes
             var dishView = new eatz.DishesView({model:res, page:p}); // create the browse view  
             $("#content").html(dishView.render().el); //render the view
         },

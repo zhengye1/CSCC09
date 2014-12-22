@@ -2,6 +2,8 @@ var eatz =  eatz || {};
 
 eatz.DishCollection = Backbone.Collection.extend({
     model: eatz.Dish,
-    url:"/dishes"
-    //localStorage: new Backbone.LocalStorage('eatz')
+    url:"/dishes",
+    comparator: function(dish){
+        return dish.get("name").toLowerCase();
+    }
 });

@@ -43,12 +43,13 @@ eatz.HeaderView = Backbone.View.extend({
     },
 
     change: function(event){
-        self = this;
+        console.log(event.target.value);
         eatz.utils.hideAlert(); //Remove any existing alert message
 
-        if (!this.model)
+        if (!this.model){
             this.model = new eatz.User();
-            var change = {}; //object to hold input changes
+        }
+        var change = {}; //object to hold input changes
 
             // change event is triggered once for each change field value
             change[event.target.name] = _.escape(event.target.value);

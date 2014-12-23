@@ -15,8 +15,18 @@
                 <ul class="nav pull-right">
                     <li class="about-menu"><a href="#about">About</a></li>
                 </ul>
-
                 <ul class="nav pull-right">
+                    <li class="dropdown" id="orderdrop">
+                        <a class="dropdown-toggle" id="order" data-toggle="dropdown">
+                        <i class="icon-filter icon-white icon-small"></i>Sort</a>
+                    <div id="order_form" class="dropdown-menu">
+                        <form id="order_dropForm">
+                            <h5>Sort Order</h5>
+                            <input type="radio" name="order" value="order_name" checked="checked">Name<br>
+                            <input type="radio" name="order" value="order_venue">Venue
+                        </form>
+                    </div>
+                    </li>
                     <li class="dropdown" id="signupdrop">
                         <a class="dropdown-toggle" id="register" data-toggle="dropdown">
                     <strong class="caret"></strong> Sign Up</a>
@@ -109,6 +119,7 @@
 
                   </div>  <!-- dropdown-menu -->
                 </li>  <!-- dropdown logindrop -->
+
 
             </ul>  <!-- navbar links -->
             </div>

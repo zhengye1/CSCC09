@@ -13,6 +13,7 @@ eatz.DishesView = Backbone.View.extend({
 
     render: function () {
         var dishes = this.model.models;
+        console.log(this.model);
         var len = dishes.length;
         var startPos = (this.options.page - 1) * 8;
         var endPos = Math.min(startPos + 8, len);

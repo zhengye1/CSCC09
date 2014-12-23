@@ -20,10 +20,10 @@ eatz.AppRouter = Backbone.Router.extend({
     },
 
     initialize: function() {
+        console.log("Start from main");
         // initialize the views
         this.about;
         this.home;
-        eatz.pubSub = _.extend({}, Backbone.Events);
         this.headerView = new eatz.HeaderView();
         $('#navbar').html(this.headerView.el);
     },
@@ -75,6 +75,7 @@ eatz.AppRouter = Backbone.Router.extend({
                 console.log("Error in main.js");
             }
         });
+        
         this.headerView.selectMenuItem('browse-menu');
         document.body.style.background = "url('img/EditView.png')";
     },

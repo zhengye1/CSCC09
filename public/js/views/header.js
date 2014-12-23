@@ -43,7 +43,10 @@ eatz.HeaderView = Backbone.View.extend({
     },
 
     change: function(event){
-        console.log(event.target.value);
+        if(event.target.name === "order"){
+            eatz.order = event.target.value;
+            eatz.pubSub.trigger("order", eatz.order);
+        }
         eatz.utils.hideAlert(); //Remove any existing alert message
 
         if (!this.model){

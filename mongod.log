@@ -1,43 +1,37 @@
 warning: bind_ip of 0.0.0.0 is unnecessary; listens on all ips by default
-2014-12-23T14:20:11.885+0000 [initandlisten] MongoDB starting : pid=10758 port=27017 dbpath=/data/db 64-bit host=zhengye1-cscc09-1164497
-2014-12-23T14:20:11.885+0000 [initandlisten] db version v2.6.5
-2014-12-23T14:20:11.885+0000 [initandlisten] git version: e99d4fcb4279c0279796f237aa92fe3b64560bf6
-2014-12-23T14:20:11.885+0000 [initandlisten] build info: Linux build8.nj1.10gen.cc 2.6.32-431.3.1.el6.x86_64 #1 SMP Fri Jan 3 21:39:27 UTC 2014 x86_64 BOOST_LIB_VERSION=1_49
-2014-12-23T14:20:11.885+0000 [initandlisten] allocator: tcmalloc
-2014-12-23T14:20:11.886+0000 [initandlisten] options: { net: { bindIp: "0.0.0.0" }, storage: { journal: { enabled: false } } }
-2014-12-23T14:20:12.091+0000 [initandlisten] waiting for connections on port 27017
-2014-12-23T14:20:24.215+0000 [initandlisten] connection accepted from 127.0.0.1:52238 #1 (1 connection now open)
-2014-12-23T14:20:24.218+0000 [initandlisten] connection accepted from 127.0.0.1:52239 #2 (2 connections now open)
-2014-12-23T14:20:24.220+0000 [initandlisten] connection accepted from 127.0.0.1:52240 #3 (3 connections now open)
-2014-12-23T14:20:24.220+0000 [initandlisten] connection accepted from 127.0.0.1:52241 #4 (4 connections now open)
-2014-12-23T14:20:24.221+0000 [initandlisten] connection accepted from 127.0.0.1:52242 #5 (5 connections now open)
-2014-12-23T14:21:12.153+0000 [clientcursormon] mem (MB) res:31 virt:307
-2014-12-23T14:21:12.154+0000 [clientcursormon]  mapped:160
-2014-12-23T14:21:12.154+0000 [clientcursormon]  connections:5
-2014-12-23T14:26:12.167+0000 [clientcursormon] mem (MB) res:30 virt:307
-2014-12-23T14:26:12.167+0000 [clientcursormon]  mapped:160
-2014-12-23T14:26:12.168+0000 [clientcursormon]  connections:5
-2014-12-23T14:31:12.215+0000 [clientcursormon] mem (MB) res:30 virt:307
-2014-12-23T14:31:12.215+0000 [clientcursormon]  mapped:160
-2014-12-23T14:31:12.215+0000 [clientcursormon]  connections:5
-2014-12-23T14:36:12.232+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T14:36:12.232+0000 [clientcursormon]  mapped:160
-2014-12-23T14:36:12.232+0000 [clientcursormon]  connections:5
-2014-12-23T14:41:12.246+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T14:41:12.246+0000 [clientcursormon]  mapped:160
-2014-12-23T14:41:12.246+0000 [clientcursormon]  connections:5
-2014-12-23T14:46:12.259+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T14:46:12.259+0000 [clientcursormon]  mapped:160
-2014-12-23T14:46:12.259+0000 [clientcursormon]  connections:5
-2014-12-23T14:51:12.272+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T14:51:12.272+0000 [clientcursormon]  mapped:160
-2014-12-23T14:51:12.272+0000 [clientcursormon]  connections:5
-2014-12-23T14:56:12.285+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T14:56:12.285+0000 [clientcursormon]  mapped:160
-2014-12-23T14:56:12.285+0000 [clientcursormon]  connections:5
-2014-12-23T15:01:12.298+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T15:01:12.298+0000 [clientcursormon]  mapped:160
-2014-12-23T15:01:12.298+0000 [clientcursormon]  connections:5
-2014-12-23T15:06:12.313+0000 [clientcursormon] mem (MB) res:29 virt:307
-2014-12-23T15:06:12.313+0000 [clientcursormon]  mapped:160
-2014-12-23T15:06:12.313+0000 [clientcursormon]  connections:5
+2014-12-23T20:14:37.358+0000 [initandlisten] MongoDB starting : pid=11887 port=27017 dbpath=/data/db 64-bit host=zhengye1-cscc09-1164497
+2014-12-23T20:14:37.359+0000 [initandlisten] db version v2.6.5
+2014-12-23T20:14:37.359+0000 [initandlisten] git version: e99d4fcb4279c0279796f237aa92fe3b64560bf6
+2014-12-23T20:14:37.359+0000 [initandlisten] build info: Linux build8.nj1.10gen.cc 2.6.32-431.3.1.el6.x86_64 #1 SMP Fri Jan 3 21:39:27 UTC 2014 x86_64 BOOST_LIB_VERSION=1_49
+2014-12-23T20:14:37.359+0000 [initandlisten] allocator: tcmalloc
+2014-12-23T20:14:37.359+0000 [initandlisten] options: { net: { bindIp: "0.0.0.0" }, storage: { journal: { enabled: false } } }
+2014-12-23T20:14:37.489+0000 [initandlisten] waiting for connections on port 27017
+2014-12-23T20:14:41.351+0000 [initandlisten] connection accepted from 127.0.0.1:34004 #1 (1 connection now open)
+2014-12-23T20:14:41.352+0000 [initandlisten] connection accepted from 127.0.0.1:34005 #2 (2 connections now open)
+2014-12-23T20:14:41.353+0000 [initandlisten] connection accepted from 127.0.0.1:34006 #3 (3 connections now open)
+2014-12-23T20:14:41.353+0000 [initandlisten] connection accepted from 127.0.0.1:34007 #4 (4 connections now open)
+2014-12-23T20:14:41.354+0000 [initandlisten] connection accepted from 127.0.0.1:34008 #5 (5 connections now open)
+2014-12-23T20:15:37.480+0000 [clientcursormon] mem (MB) res:45 virt:307
+2014-12-23T20:15:37.481+0000 [clientcursormon]  mapped:160
+2014-12-23T20:15:37.481+0000 [clientcursormon]  connections:5
+2014-12-23T20:20:37.494+0000 [clientcursormon] mem (MB) res:40 virt:307
+2014-12-23T20:20:37.494+0000 [clientcursormon]  mapped:160
+2014-12-23T20:20:37.494+0000 [clientcursormon]  connections:5
+2014-12-23T20:25:37.508+0000 [clientcursormon] mem (MB) res:36 virt:307
+2014-12-23T20:25:37.508+0000 [clientcursormon]  mapped:160
+2014-12-23T20:25:37.508+0000 [clientcursormon]  connections:5
+2014-12-23T20:30:37.521+0000 [clientcursormon] mem (MB) res:36 virt:307
+2014-12-23T20:30:37.521+0000 [clientcursormon]  mapped:160
+2014-12-23T20:30:37.521+0000 [clientcursormon]  connections:5
+2014-12-23T20:35:37.533+0000 [clientcursormon] mem (MB) res:36 virt:307
+2014-12-23T20:35:37.534+0000 [clientcursormon]  mapped:160
+2014-12-23T20:35:37.534+0000 [clientcursormon]  connections:5
+2014-12-23T20:40:37.546+0000 [clientcursormon] mem (MB) res:36 virt:307
+2014-12-23T20:40:37.546+0000 [clientcursormon]  mapped:160
+2014-12-23T20:40:37.546+0000 [clientcursormon]  connections:5
+2014-12-23T20:45:37.559+0000 [clientcursormon] mem (MB) res:33 virt:307
+2014-12-23T20:45:37.559+0000 [clientcursormon]  mapped:160
+2014-12-23T20:45:37.559+0000 [clientcursormon]  connections:5
+2014-12-23T20:50:37.572+0000 [clientcursormon] mem (MB) res:33 virt:307
+2014-12-23T20:50:37.572+0000 [clientcursormon]  mapped:160
+2014-12-23T20:50:37.572+0000 [clientcursormon]  connections:5

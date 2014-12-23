@@ -7,13 +7,21 @@ var eatz = eatz || {};
 eatz.DishesView = Backbone.View.extend({
 
     initialize: function (options) {
+        var self = this;
         this.options = options || {};
-        this.render();
+        var order = '';
+        eatz.pubSub.on('order', function(msg){
+            self.order = msg;
+            console.log(self.order);
+            self.render();
+        });
+        //this.render();
     },
 
     render: function () {
-        var dishes = this.model.models;
-        console.log(this.model);
+        var dishCollection = this.model;
+        var dishes = dishCollection.models;
+        dishCollection.option = this.order;
         var len = dishes.length;
         var startPos = (this.options.page - 1) * 8;
         var endPos = Math.min(startPos + 8, len);

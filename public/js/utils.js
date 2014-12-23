@@ -1,5 +1,6 @@
 var eatz = eatz || {};
 
+eatz.pubSub = _.extend({}, Backbone.Events);
 eatz.utils = {
 
     // Asynchronously load templates located in separate .html files

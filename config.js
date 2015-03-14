@@ -5,7 +5,7 @@ module.exports = {
     sessionTimeout: 1000*60*2,  // 2 minute session timeout
     env: 'dev',   // alternative modes: test, production
     dbhost: 'localhost',
-    dbname: 'test',
+    dbname: 'test'
     //dbuser: 'zhengye1',
     //dbpass: 'zhengye1'
  }

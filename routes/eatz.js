@@ -213,8 +213,6 @@ exports.isAuth = function(req, res){
 
 // signin
 exports.auth = function(req, res){
-  console.log(req.body.username);
-  console.log(req.body.password);
   // if the current request is login
   if (req.body.login){
     var username =  req.body.username; // get username ;

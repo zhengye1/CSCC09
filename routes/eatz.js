@@ -223,7 +223,6 @@ exports.auth = function(req, res){
     else{
       User.findOne({'username':username}, function(err, user){
         if(!err){
-          console.log(user);
           bcrypt.compare(password, user.password, function(err, result){
             if (result){
               req.session.auth = true ; // user logged in

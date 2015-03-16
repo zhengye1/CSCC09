@@ -12,7 +12,7 @@ var fs = require('fs'),
     bcrypt = require("bcrypt");
 
 // Connect to database
-mongoose.connect('mongodb://' + config.dbhost+ '/' + config.dbname);
+mongoose.connect('mongodb://' + config.dbuser + ':' + config.dbpass + '@' + config.dbhost+ '/' + config.dbname);
 
 
 mongoose.connection.on('errror', console.error.bind(console, 'MongoDB connection failed:'));

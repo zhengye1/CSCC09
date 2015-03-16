@@ -90,12 +90,10 @@ var options = {
 };
 
 // Start HTTPS serve
-var a  = https.createServer(options, app).listen(app.get('port'), process.env.IP, function () {
+var a  = https.createServer(options, app).listen(app.get('port'), 'mathlab.utsc.utoronto.ca', function (){
     console.log("Express server listening on port %d in %s mode",
     		app.get('port'), config.env); 
 });
-
-
 
 
 

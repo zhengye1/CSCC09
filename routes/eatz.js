@@ -213,8 +213,6 @@ exports.isAuth = function(req, res){
 
 // signin
 exports.auth = function(req, res){
-  console.log(req.body.username);
-  console.log(req.body.password);
   // if the current request is login
   if (req.body.login){
     var username =  req.body.username; // get username ;
@@ -225,7 +223,6 @@ exports.auth = function(req, res){
     else{
       User.findOne({'username':username}, function(err, user){
         if(!err){
-          console.log(user);
           bcrypt.compare(password, user.password, function(err, result){
             if (result){
               req.session.auth = true ; // user logged in

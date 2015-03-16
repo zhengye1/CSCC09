@@ -3,5 +3,63 @@ connect.multipart() will be removed in connect 3.0
 visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
 connect.limit() will be removed in connect 3.0
 Express server listening on port 41402 in dev mode
+<<<<<<< HEAD
 [90mGET / [32m200 [90m18ms - 29b[0m
 [90mGET /favicon.ico [33m404 [90m3ms[0m
+=======
+[90mGET /public/ [32m200 [90m39ms[0m
+[90mGET /public/css/bootstrap-responsive.min.css [32m200 [90m30ms[0m
+[90mGET /public/css/styles.css [32m200 [90m12ms[0m
+[90mGET /public/css/bootstrap.min.css [32m200 [90m26ms[0m
+[90mGET /public/js/lib/jquery-min.js [32m200 [90m22ms[0m
+[90mGET /public/js/lib/underscore-min.js [32m200 [90m19ms[0m
+[90mGET /public/js/lib/bootstrap.min.js [32m200 [90m9ms[0m
+[90mGET /public/js/lib/backbone.localStorage.js [32m200 [90m8ms[0m
+[90mGET /public/js/lib/backbone-min.js [32m200 [90m17ms[0m
+[90mGET /public/js/views/paginator.js [32m200 [90m17ms - 743b[0m
+[90mGET /public/js/views/home.js [32m200 [90m9ms - 334b[0m
+[90mGET /public/js/views/header.js [32m200 [90m42ms[0m
+[90mGET /public/js/views/about.js [32m200 [90m14ms - 327b[0m
+[90mGET /public/js/views/mapview.js [32m200 [90m11ms - 808b[0m
+[90mGET /public/js/views/edit.js [32m200 [90m35ms[0m
+[90mGET /public/js/views/dishview.js [32m200 [90m9ms - 373b[0m
+[90mGET /public/js/views/dishesview.js [32m200 [90m7ms - 783b[0m
+[90mGET /public/js/models/dishes.js [32m200 [90m6ms - 173b[0m
+[90mGET /public/js/models/dish.js [32m200 [90m6ms[0m
+[90mGET /public/js/models/map.js [32m200 [90m2ms - 589b[0m
+[90mGET /public/js/models/user.js [32m200 [90m10ms[0m
+[90mGET /public/js/models/users.js [32m200 [90m2ms - 174b[0m
+[90mGET /public/js/utils.js [32m200 [90m23ms[0m
+[90mGET /public/js/main.js [32m200 [90m38ms[0m
+[90mGET /public/tpl/AboutView.html [32m200 [90m12ms - 127b[0m
+[90mGET /public/tpl/HomeView.html [32m200 [90m23ms - 370b[0m
+[90mGET /public/tpl/HeaderView.html [32m200 [90m8ms[0m
+[90mGET /public/tpl/DishView.html [32m200 [90m1ms - 315b[0m
+[90mGET /public/tpl/EditView.html [32m200 [90m18ms[0m
+[90mGET /public/tpl/MapView.html [32m200 [90m2ms - 28b[0m
+[90mGET /public/img/restaurant_food.ico [32m200 [90m35ms - 66.06kb[0m
+[90mGET /auth [32m200 [90m4ms - 36b[0m
+[90mGET /dishes [32m200 [90m33ms - 328b[0m
+[90mGET /public/img/EditView.png [32m200 [90m29ms - 29kb[0m
+[90mGET /public/css/Andika-R.woff [32m200 [90m24ms - 510.97kb[0m
+[90mGET /public/img/generic.gif [32m200 [90m15ms - 89.93kb[0m
+[90mGET /public/img/restaurant_icon.png [32m200 [90m15ms - 1.75kb[0m
+[90mGET /public/img/HomeView.jpg [32m200 [90m22ms - 413.28kb[0m
+[90mGET /dishes [32m200 [90m81ms - 328b[0m
+[90mGET /public/img/uploads/22779-h3ucwn_240.jpg [32m200 [90m48ms - 5.98kb[0m
+[90mGET /dishes [32m200 [90m36ms - 328b[0m
+[90mGET /public/img/uploads/22779-h3ucwn_360.jpg [32m200 [90m3ms - 9.91kb[0m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [localhost:27017]
+    at null.<anonymous> (/home/zhenye1/Documents/Backbone/CSCC09/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:549:74)
+    at emit (events.js:106:17)
+    at null.<anonymous> (/home/zhenye1/Documents/Backbone/CSCC09/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:150:15)
+    at emit (events.js:98:17)
+    at Socket.<anonymous> (/home/zhenye1/Documents/Backbone/CSCC09/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:533:10)
+    at Socket.emit (events.js:95:17)
+    at net.js:440:14
+    at process._tickCallback (node.js:419:13)
+>>>>>>> 95d903e69033ba713f701c98865bd702dd398904

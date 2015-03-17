@@ -9,7 +9,7 @@ var fs = require('fs'),
     gm = require('gm').subClass({imageMagick:true}),
     config = require(__dirname + '/../config'),  // port#, other params
     express = require("express"),
-    bcrypt = require("bcrypt");
+    bcrypt = require("../bCrypt");
 
 // Connect to database
 mongoose.connect('mongodb://' + config.dbhost+ '/' + config.dbname);

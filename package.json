@@ -1,29 +1,28 @@
 {
-  "name": "CSCC09",
+  "name": "Eatz",
   "version": "1.0.0",
-  "description": "CSCC09 Project",
-  "main": "app.js",
+  "description": "This is CSCC09 Fall 2014 project",
+  "engines":{
+    "node":"0.10.x"
+  },
   "dependencies": {
-    "bcrypt": "^0.7.8",
     "express": "^3.4.8",
     "gm": "^1.17.0",
-    "mongoose": "^3.8.20",
     "mongodb": "^1.4.24",
+    "mongoose": "^3.8.20",
     "underscore": "^1.7.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/zhengye1/CSCC09"
   },
   "author": "Vincent Zheng, Eliot Chow",
-  "license": "MIT",
+  "license": "UTSC",
   "bugs": {
     "url": "https://github.com/zhengye1/CSCC09/issues"
   },
   "homepage": "https://github.com/zhengye1/CSCC09"
 }
-

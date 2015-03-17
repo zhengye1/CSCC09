@@ -1,1 +1,1 @@
-nohup nodejs app.js >& node.log 
+nohup node app.js >& node.log 

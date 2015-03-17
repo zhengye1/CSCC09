@@ -1,82 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/home/ubuntu/.nvm/v0.10.33/bin/node',
-1 verbose cli   '/home/ubuntu/.nvm/v0.10.33/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'expres@3.4.8' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 warn package.json VincentZ@1.0.0 No repository field.
-5 verbose readDependencies using package.json deps
-6 verbose cache add [ 'expres@3.4.8', null ]
-7 verbose cache add name=undefined spec="expres@3.4.8" args=["expres@3.4.8",null]
-8 verbose parsed url { protocol: null,
-8 verbose parsed url   slashes: null,
-8 verbose parsed url   auth: null,
-8 verbose parsed url   host: null,
-8 verbose parsed url   port: null,
-8 verbose parsed url   hostname: null,
-8 verbose parsed url   hash: null,
-8 verbose parsed url   search: null,
-8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: 'expres@3.4.8',
-8 verbose parsed url   path: 'expres@3.4.8',
-8 verbose parsed url   href: 'expres@3.4.8' }
-9 verbose cache add name="expres" spec="3.4.8" args=["expres","3.4.8"]
-10 verbose parsed url { protocol: null,
-10 verbose parsed url   slashes: null,
-10 verbose parsed url   auth: null,
-10 verbose parsed url   host: null,
-10 verbose parsed url   port: null,
-10 verbose parsed url   hostname: null,
-10 verbose parsed url   hash: null,
-10 verbose parsed url   search: null,
-10 verbose parsed url   query: null,
-10 verbose parsed url   pathname: '3.4.8',
-10 verbose parsed url   path: '3.4.8',
-10 verbose parsed url   href: '3.4.8' }
-11 verbose addNamed [ 'expres', '3.4.8' ]
-12 verbose addNamed [ '3.4.8', '3.4.8' ]
-13 silly lockFile 180db358-expres-3-4-8 expres@3.4.8
-14 verbose lock expres@3.4.8 /home/ubuntu/.npm/180db358-expres-3-4-8.lock
-15 verbose request where is /expres
-16 verbose request registry https://registry.npmjs.org/
-17 verbose request id 3f08b0f111cf1131
-18 verbose url raw /expres
-19 verbose url resolving [ 'https://registry.npmjs.org/', './expres' ]
-20 verbose url resolved https://registry.npmjs.org/expres
-21 verbose request where is https://registry.npmjs.org/expres
-22 info trying registry request attempt 1 at 19:13:58
-23 http GET https://registry.npmjs.org/expres
-24 http 200 https://registry.npmjs.org/expres
-25 silly registry.get cb [ 200,
-25 silly registry.get   { date: 'Thu, 18 Dec 2014 19:13:58 GMT',
-25 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-25 silly registry.get     etag: '"6WJXW7DOETT9N11V6QYNJMLQV"',
-25 silly registry.get     'content-type': 'application/json',
-25 silly registry.get     'cache-control': 'max-age=60',
-25 silly registry.get     'content-length': '35210',
-25 silly registry.get     'accept-ranges': 'bytes',
-25 silly registry.get     via: '1.1 varnish',
-25 silly registry.get     age: '0',
-25 silly registry.get     'x-served-by': 'cache-ord1735-ORD',
-25 silly registry.get     'x-cache': 'MISS',
-25 silly registry.get     'x-cache-hits': '0',
-25 silly registry.get     'x-timer': 'S1418930038.574351,VS0,VE182',
-25 silly registry.get     vary: 'Accept',
-25 silly registry.get     'keep-alive': 'timeout=10, max=50',
-25 silly registry.get     connection: 'Keep-Alive' } ]
-26 silly lockFile 180db358-expres-3-4-8 expres@3.4.8
-27 silly lockFile 180db358-expres-3-4-8 expres@3.4.8
-28 error Error: version not found: expres@3.4.8
-28 error     at /home/ubuntu/.nvm/v0.10.33/lib/node_modules/npm/lib/cache/add-named.js:125:12
-28 error     at saved (/home/ubuntu/.nvm/v0.10.33/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
-28 error     at Object.oncomplete (fs.js:107:15)
-29 error If you need help, you may report this *entire* log,
-29 error including the npm and node versions, at:
-29 error     <http://github.com/npm/npm/issues>
-30 error System Linux 3.14.13-c9
-31 error command "/home/ubuntu/.nvm/v0.10.33/bin/node" "/home/ubuntu/.nvm/v0.10.33/bin/npm" "install" "expres@3.4.8"
-32 error cwd /home/ubuntu/workspace
-33 error node -v v0.10.33
-34 error npm -v 1.4.28
-35 verbose exit [ 1, true ]
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart Eatz@1.0.0
+6 info start Eatz@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info Eatz@1.0.0 Failed to exec start script
+9 error Eatz@1.0.0 start: `node app.js`
+9 error Exit status 8
+10 error Failed at the Eatz@1.0.0 start script.
+10 error This is most likely a problem with the Eatz package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     node app.js
+10 error You can get their info via:
+10 error     npm owner ls Eatz
+10 error There is likely additional logging output above.
+11 error System Linux 3.13.0-46-generic
+12 error command "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+13 error cwd /home/zhenye1/Documents/Backbone/CSCC09
+14 error node -v v0.10.33
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
